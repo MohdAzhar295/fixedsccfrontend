@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #0f172a;
+}
+
+.font-display {
+  font-family: "Cabinet Grotesk", "IBM Plex Sans", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-ui {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.tick-label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.bp-grid {
+  background-image:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 0),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.04) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.btn-primary {
+  background: #0284c7;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.625rem 1.25rem;
+  border-radius: 2px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.btn-outline:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+}
+
+.card-tech {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.card-tech:hover {
+  border-color: #0284c7;
+  box-shadow: 0 6px 22px -10px rgba(2, 132, 199, 0.25);
+}
+
+.badge-stock {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.badge-in {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-out {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise-in {
+  animation: riseIn 0.5s ease both;
+}
+
+@keyframes pulse-skeleton {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton {
+  animation: pulse-skeleton 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: #e2e8f0;
+  border-radius: 2px;
+}
+
+/* Equal-height Instagram reel slots on homepage */
+.instagram-embed-slot {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 2px;
+  background: #f8fafc;
+}
+
+.instagram-embed-slot .instagram-media {
+  position: absolute !important;
+  left: 50% !important;
+  top: 0 !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+.instagram-embed-slot iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
