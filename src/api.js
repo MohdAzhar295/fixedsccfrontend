@@ -1,5 +1,9 @@
 /**
- * API client — fetch helpers for storefront and admin endpoints.
+ * api.js — Backend API client
+ *
+ * WHAT: JSON fetch wrapper plus helpers for products, orders, leads, admin CRUD, and WhatsApp deep-link builders.
+ * ROUTE/USED BY: Pages and components that load catalog data, submit forms, or manage admin resources.
+ * API/CONNECTS: config.API_URL — /api/products, /api/orders, /api/leads, /api/shop-categories, /api/admin/*.
  */
 import { API_URL } from "./config";
 
@@ -30,6 +34,10 @@ export function fetchProducts(params = {}) {
 
 export function fetchProductCategories() {
   return request("/api/products/categories");
+}
+
+export function fetchProduct(id) {
+  return request(`/api/products/${id}`);
 }
 
 export function fetchShopCategories() {
